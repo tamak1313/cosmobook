@@ -10,57 +10,80 @@ link-citations: yes
 description: "衛星データのそれぞれの特徴や取得方法を学びましょう！"
 ---
 
-# 初めに
+# 初めに {-}
 近年、衛星データは注目を集めています。
 
 ## 想定読者
 
-・衛星データとは何か知りたい人
-・衛星データを使ってみたい人
++ 衛星データとは何か知りたい人
++ 衛星データを使ってみたい人
 
 ## 作業環境
 
-2020年10月現在
-Windows 10 64bit
+2020年10月現在  
+Windows 10 64bit  
+QGIS 3.14.16  
 
 
 
 
 <!--chapter:end:index.Rmd-->
 
-# Introduction {#intro}
+# 衛星データの活用事例
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
-
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
-
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
-
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
 
 <!--chapter:end:01-intro.Rmd-->
 
-# Literature
-
-Here is a review of existing methods.
+# 衛星データの種類を知る
 
 <!--chapter:end:02-literature.Rmd-->
 
-# Methods
+# 衛星データの取得方法(USGS)
 
-We describe our methods in this chapter.
+## USGS EarthExplorerをダウンロード、登録/ログインする
+
+## データを取得したい地域を設定する
++ 【Geocoder】のタブで【World Features】を選択する(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)
++ 【Country】から【BANGLADESH】を選択
++ 【Show】を押下
+
++ 表示された表から、取得したい地域に近い/取得したい地域を選択する  
+
+下図のように、右エリアにポイントが表示される
+
+## データ取得領域をバングラデシュ全体に拡張する
+【Polygon】  
++ データを取得したいエリアをポイントが取り囲むよう、各地点をクリックしていく
++ 選択したエリアが赤く表示される  
+
+【Circle】  
++ データを取得したい地域を含むように、右地図上の2点を選択する
++ 選択した2点で描かれる円の範囲が赤く表示される
+
+## データを取得したい日時を設定する
++ 【Date Range】から選択
+(カレンダーから選択が可能)
+
+## 雲の量を調整する
++ 【Cloud Cover】でバーを動かすことにより、設定が可能
+＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない
+
+## Data Setsを押下
+
+##  必要なデータセットを選択する
++ データセットの中から必要なデータセットを選択する  
+＊データセット名の左のインフォメーションマークを押下すると説明が出る  
+＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される
+
+## Resultsを押下する
+
+## データのダウンロード
++【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる  
+＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)
++ 必要なデータセット以外は、【Exclude Scene from Results】を押下
++ 【Click here to export your results】の【Export data】を押下し、【Export Name】、【Export Format】を設定する  
+ダウンロード完了
 
 <!--chapter:end:03-method.Rmd-->
 

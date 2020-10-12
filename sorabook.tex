@@ -41,46 +41,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -123,102 +83,113 @@
 \tableofcontents
 }
 \hypertarget{ux521dux3081ux306b}{%
-\chapter{初めに}\label{ux521dux3081ux306b}}
+\chapter*{初めに}\label{ux521dux3081ux306b}}
+\addcontentsline{toc}{chapter}{初めに}
 
 近年、衛星データは注目を集めています。
 
 \hypertarget{ux60f3ux5b9aux8aadux8005}{%
 \section{想定読者}\label{ux60f3ux5b9aux8aadux8005}}
 
-・衛星データとは何か知りたい人
-・衛星データを使ってみたい人
+\begin{itemize}
+\tightlist
+\item
+  衛星データとは何か知りたい人
+\item
+  衛星データを使ってみたい人
+\end{itemize}
 
 \hypertarget{ux4f5cux696dux74b0ux5883}{%
 \section{作業環境}\label{ux4f5cux696dux74b0ux5883}}
 
-2020年10月現在
-Windows 10 64bit
+2020年10月現在\\
+Windows 10 64bit\\
+QGIS 3.14.16
 
-\hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux6d3bux7528ux4e8bux4f8b}{%
+\chapter{衛星データの活用事例}\label{ux885bux661fux30c7ux30fcux30bfux306eux6d3bux7528ux4e8bux4f8b}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux7a2eux985eux3092ux77e5ux308b}{%
+\chapter{衛星データの種類を知る}\label{ux885bux661fux30c7ux30fcux30bfux306eux7a2eux985eux3092ux77e5ux308b}}
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5usgs}{%
+\chapter{衛星データの取得方法(USGS)}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5usgs}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{usgs-earthexplorerux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}{%
+\section{USGS EarthExplorerをダウンロード、登録/ログインする}\label{usgs-earthexplorerux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}}
 
-\begin{figure}
+\hypertarget{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux5730ux57dfux3092ux8a2dux5b9aux3059ux308b}{%
+\section{データを取得したい地域を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux5730ux57dfux3092ux8a2dux5b9aux3059ux308b}}
 
-{\centering \includegraphics[width=0.8\linewidth]{sorabook_files/figure-latex/nice-fig-1} 
+\begin{itemize}
+\item
+  【Geocoder】のタブで【World Features】を選択する(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)
+\item
+  【Country】から【BANGLADESH】を選択
+\item
+  【Show】を押下
+\item
+  表示された表から、取得したい地域に近い/取得したい地域を選択する
+\end{itemize}
 
-}
+下図のように、右エリアにポイントが表示される
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
+\hypertarget{ux30c7ux30fcux30bfux53d6ux5f97ux9818ux57dfux3092ux30d0ux30f3ux30b0ux30e9ux30c7ux30b7ux30e5ux5168ux4f53ux306bux62e1ux5f35ux3059ux308b}{%
+\section{データ取得領域をバングラデシュ全体に拡張する}\label{ux30c7ux30fcux30bfux53d6ux5f97ux9818ux57dfux3092ux30d0ux30f3ux30b0ux30e9ux30c7ux30b7ux30e5ux5168ux4f53ux306bux62e1ux5f35ux3059ux308b}}
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+【Polygon】\\
++ データを取得したいエリアをポイントが取り囲むよう、各地点をクリックしていく
++ 選択したエリアが赤く表示される
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+【Circle】\\
++ データを取得したい地域を含むように、右地図上の2点を選択する
++ 選択した2点で描かれる円の範囲が赤く表示される
 
-\begin{table}
+\hypertarget{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}{%
+\section{データを取得したい日時を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}}
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
+\begin{itemize}
+\tightlist
+\item
+  【Date Range】から選択
+  (カレンダーから選択が可能)
+\end{itemize}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\hypertarget{ux96f2ux306eux91cfux3092ux8abfux6574ux3059ux308b}{%
+\section{雲の量を調整する}\label{ux96f2ux306eux91cfux3092ux8abfux6574ux3059ux308b}}
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\begin{itemize}
+\tightlist
+\item
+  【Cloud Cover】でバーを動かすことにより、設定が可能
+  ＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない
+\end{itemize}
 
-Here is a review of existing methods.
+\hypertarget{data-setsux3092ux62bcux4e0b}{%
+\section{Data Setsを押下}\label{data-setsux3092ux62bcux4e0b}}
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{ux5fc5ux8981ux306aux30c7ux30fcux30bfux30bbux30c3ux30c8ux3092ux9078ux629eux3059ux308b}{%
+\section{必要なデータセットを選択する}\label{ux5fc5ux8981ux306aux30c7ux30fcux30bfux30bbux30c3ux30c8ux3092ux9078ux629eux3059ux308b}}
 
-We describe our methods in this chapter.
+\begin{itemize}
+\tightlist
+\item
+  データセットの中から必要なデータセットを選択する\\
+  ＊データセット名の左のインフォメーションマークを押下すると説明が出る\\
+  ＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される
+\end{itemize}
+
+\hypertarget{resultsux3092ux62bcux4e0bux3059ux308b}{%
+\section{Resultsを押下する}\label{resultsux3092ux62bcux4e0bux3059ux308b}}
+
+\hypertarget{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}{%
+\section{データのダウンロード}\label{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}}
+
++【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる\\
+＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)
++ 必要なデータセット以外は、【Exclude Scene from Results】を押下
++ 【Click here to export your results】の【Export data】を押下し、【Export Name】、【Export Format】を設定する\\
+ダウンロード完了
 
 \hypertarget{applications}{%
 \chapter{Applications}\label{applications}}

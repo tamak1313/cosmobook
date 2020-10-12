@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Final Words | sorabook</title>
+  <title>Chapter 3 衛星データの取得方法(USGS) | sorabook</title>
   <meta name="description" content="衛星データのそれぞれの特徴や取得方法を学びましょう！" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Final Words | sorabook" />
+  <meta property="og:title" content="Chapter 3 衛星データの取得方法(USGS) | sorabook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Final Words | sorabook" />
+  <meta name="twitter:title" content="Chapter 3 衛星データの取得方法(USGS) | sorabook" />
   
   <meta name="twitter:description" content="衛星データのそれぞれの特徴や取得方法を学びましょう！" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="applications.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="衛星データの種類を知る.html"/>
+<link rel="next" href="applications.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -113,18 +113,75 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="final-words" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Final Words</h1>
-<p>We have finished a nice book.</p>
+<div id="衛星データの取得方法usgs" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> 衛星データの取得方法(USGS)</h1>
+<div id="usgs-earthexplorerをダウンロード登録ログインする" class="section level2">
+<h2><span class="header-section-number">3.1</span> USGS EarthExplorerをダウンロード、登録/ログインする</h2>
+</div>
+<div id="データを取得したい地域を設定する" class="section level2">
+<h2><span class="header-section-number">3.2</span> データを取得したい地域を設定する</h2>
+<ul>
+<li><p>【Geocoder】のタブで【World Features】を選択する(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)</p></li>
+<li><p>【Country】から【BANGLADESH】を選択</p></li>
+<li><p>【Show】を押下</p></li>
+<li><p>表示された表から、取得したい地域に近い/取得したい地域を選択する</p></li>
+</ul>
+<p>下図のように、右エリアにポイントが表示される</p>
+</div>
+<div id="データ取得領域をバングラデシュ全体に拡張する" class="section level2">
+<h2><span class="header-section-number">3.3</span> データ取得領域をバングラデシュ全体に拡張する</h2>
+<p>【Polygon】<br />
++ データを取得したいエリアをポイントが取り囲むよう、各地点をクリックしていく
++ 選択したエリアが赤く表示される</p>
+<p>【Circle】<br />
++ データを取得したい地域を含むように、右地図上の2点を選択する
++ 選択した2点で描かれる円の範囲が赤く表示される</p>
+</div>
+<div id="データを取得したい日時を設定する" class="section level2">
+<h2><span class="header-section-number">3.4</span> データを取得したい日時を設定する</h2>
+<ul>
+<li>【Date Range】から選択
+(カレンダーから選択が可能)</li>
+</ul>
+</div>
+<div id="雲の量を調整する" class="section level2">
+<h2><span class="header-section-number">3.5</span> 雲の量を調整する</h2>
+<ul>
+<li>【Cloud Cover】でバーを動かすことにより、設定が可能
+＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない</li>
+</ul>
+</div>
+<div id="data-setsを押下" class="section level2">
+<h2><span class="header-section-number">3.6</span> Data Setsを押下</h2>
+</div>
+<div id="必要なデータセットを選択する" class="section level2">
+<h2><span class="header-section-number">3.7</span> 必要なデータセットを選択する</h2>
+<ul>
+<li>データセットの中から必要なデータセットを選択する<br />
+＊データセット名の左のインフォメーションマークを押下すると説明が出る<br />
+＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される</li>
+</ul>
+</div>
+<div id="resultsを押下する" class="section level2">
+<h2><span class="header-section-number">3.8</span> Resultsを押下する</h2>
+</div>
+<div id="データのダウンロード" class="section level2">
+<h2><span class="header-section-number">3.9</span> データのダウンロード</h2>
+<p>+【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる<br />
+＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)
++ 必要なデータセット以外は、【Exclude Scene from Results】を押下
++ 【Click here to export your results】の【Export data】を押下し、【Export Name】、【Export Format】を設定する<br />
+ダウンロード完了</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="衛星データの種類を知る.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
