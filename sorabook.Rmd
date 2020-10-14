@@ -1,5 +1,5 @@
 --- 
-title: "sorabook"
+title: "衛星BASIC"
 author: "Tamaki.M"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,7 +7,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "衛星データのそれぞれの特徴や取得方法を学びましょう！"
+description: "衛星データ初心者の方向けに、衛星データのいろはをお伝えします！"
 ---
 
 # 初めに {-}
@@ -29,21 +29,29 @@ QGIS 3.14.16
 
 <!--chapter:end:index.Rmd-->
 
-# 衛星データの活用事例
+# 衛星データについて知ろう
+
+## なぜ今、リモートセンシングが注目を集めているのか
+
+## リモートセンシング活用事例
+
+詳しい活用事例は、[リモートセンシング活用事例集](https://tamak1313.github.io/casestudy/)で紹介しています(日々更新中！)
+ぜひ合わせてご覧ください。
+
+## 衛星データの種類
 
 
 
 <!--chapter:end:01-intro.Rmd-->
 
-# 衛星データの種類を知る
+# 衛星データを見てみよう
 
-<!--chapter:end:02-literature.Rmd-->
+## 衛星データを見られるサイト
 
-# 衛星データの取得方法(USGS)
+## 衛星データの取得方法
+### USGS EarthExplorerをダウンロード、登録/ログインする
 
-## USGS EarthExplorerをダウンロード、登録/ログインする
-
-## データを取得したい地域を設定する
+### データを取得したい地域を設定する
 + 【Geocoder】のタブで【World Features】を選択する(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)
 + 【Country】から【BANGLADESH】を選択
 + 【Show】を押下
@@ -52,7 +60,7 @@ QGIS 3.14.16
 
 下図のように、右エリアにポイントが表示される
 
-## データ取得領域をバングラデシュ全体に拡張する
+### データ取得領域をバングラデシュ全体に拡張する
 【Polygon】  
 + データを取得したいエリアをポイントが取り囲むよう、各地点をクリックしていく
 + 選択したエリアが赤く表示される  
@@ -61,29 +69,34 @@ QGIS 3.14.16
 + データを取得したい地域を含むように、右地図上の2点を選択する
 + 選択した2点で描かれる円の範囲が赤く表示される
 
-## データを取得したい日時を設定する
+### データを取得したい日時を設定する
 + 【Date Range】から選択
 (カレンダーから選択が可能)
 
-## 雲の量を調整する
+### 雲の量を調整する
 + 【Cloud Cover】でバーを動かすことにより、設定が可能
 ＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない
 
-## Data Setsを押下
+### Data Setsを押下
 
-##  必要なデータセットを選択する
+###  必要なデータセットを選択する
 + データセットの中から必要なデータセットを選択する  
 ＊データセット名の左のインフォメーションマークを押下すると説明が出る  
 ＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される
 
-## Resultsを押下する
+### Resultsを押下する
 
-## データのダウンロード
+### データのダウンロード
 +【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる  
 ＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)
 + 必要なデータセット以外は、【Exclude Scene from Results】を押下
 + 【Click here to export your results】の【Export data】を押下し、【Export Name】、【Export Format】を設定する  
 ダウンロード完了
+
+<!--chapter:end:02-literature.Rmd-->
+
+# 衛星データを活用しよう
+
 
 <!--chapter:end:03-method.Rmd-->
 

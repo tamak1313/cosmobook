@@ -1,5 +1,5 @@
 --- 
-title: "sorabook"
+title: "衛星BASIC"
 author: "Tamaki.M"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,7 +7,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "衛星データのそれぞれの特徴や取得方法を学びましょう！"
+description: "衛星データ初心者の方向けに、衛星データのいろはをお伝えします！"
 ---
 
 # 初めに {-}
