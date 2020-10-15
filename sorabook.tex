@@ -73,7 +73,7 @@
 
 \title{衛星BASIC}
 \author{Tamaki.M}
-\date{2020-10-15}
+\date{2020-10-16}
 
 \begin{document}
 \maketitle
@@ -86,18 +86,11 @@
 \chapter*{初めに}\label{ux521dux3081ux306b}}
 \addcontentsline{toc}{chapter}{初めに}
 
-近年、衛星データは注目を集めています。
+\hypertarget{ux306aux305cux4ecaux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux304cux6ce8ux76eeux3092ux96c6ux3081ux3066ux3044ux308bux306eux304b}{%
+\section{なぜ今、リモートセンシングが注目を集めているのか}\label{ux306aux305cux4ecaux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux304cux6ce8ux76eeux3092ux96c6ux3081ux3066ux3044ux308bux306eux304b}}
 
-\hypertarget{ux60f3ux5b9aux8aadux8005}{%
-\section{想定読者}\label{ux60f3ux5b9aux8aadux8005}}
-
-\begin{itemize}
-\tightlist
-\item
-  衛星データとは何か知りたい人
-\item
-  衛星データを使ってみたい人
-\end{itemize}
+\hypertarget{ux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux30c7ux30fcux30bfux6d3bux7528ux4e8bux4f8b}{%
+\section{リモートセンシングデータ活用事例}\label{ux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux30c7ux30fcux30bfux6d3bux7528ux4e8bux4f8b}}
 
 \hypertarget{ux4f5cux696dux74b0ux5883}{%
 \section{作業環境}\label{ux4f5cux696dux74b0ux5883}}
@@ -106,105 +99,133 @@
 Windows 10 64bit\\
 QGIS 3.14.16
 
-\hypertarget{ux885bux661fux30c7ux30fcux30bfux306bux3064ux3044ux3066ux77e5ux308dux3046}{%
-\chapter{衛星データについて知ろう}\label{ux885bux661fux30c7ux30fcux30bfux306bux3064ux3044ux3066ux77e5ux308dux3046}}
-
-\hypertarget{ux306aux305cux4ecaux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux304cux6ce8ux76eeux3092ux96c6ux3081ux3066ux3044ux308bux306eux304b}{%
-\section{なぜ今、リモートセンシングが注目を集めているのか}\label{ux306aux305cux4ecaux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux304cux6ce8ux76eeux3092ux96c6ux3081ux3066ux3044ux308bux306eux304b}}
-
-\hypertarget{ux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux6d3bux7528ux4e8bux4f8b}{%
-\section{リモートセンシング活用事例}\label{ux30eaux30e2ux30fcux30c8ux30bbux30f3ux30b7ux30f3ux30b0ux6d3bux7528ux4e8bux4f8b}}
-
-詳しい活用事例は、\href{https://tamak1313.github.io/casestudy/}{リモートセンシング活用事例集}で紹介しています(日々更新中！)
-ぜひ合わせてご覧ください。
+\hypertarget{ux4e8bux524dux6e96ux5099}{%
+\chapter{事前準備}\label{ux4e8bux524dux6e96ux5099}}
 
 \hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux7a2eux985e}{%
 \section{衛星データの種類}\label{ux885bux661fux30c7ux30fcux30bfux306eux7a2eux985e}}
 
-\hypertarget{ux885bux661fux30c7ux30fcux30bfux3092ux898bux3066ux307fux3088ux3046}{%
-\chapter{衛星データを見てみよう}\label{ux885bux661fux30c7ux30fcux30bfux3092ux898bux3066ux307fux3088ux3046}}
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux3067ux304dux308bux30b5ux30a4ux30c8}{%
+\section{衛星データをダウンロードできるサイト}\label{ux885bux661fux30c7ux30fcux30bfux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux3067ux304dux308bux30b5ux30a4ux30c8}}
 
-\hypertarget{ux885bux661fux30c7ux30fcux30bfux3092ux898bux3089ux308cux308bux30b5ux30a4ux30c8}{%
-\section{衛星データを見られるサイト}\label{ux885bux661fux30c7ux30fcux30bfux3092ux898bux3089ux308cux308bux30b5ux30a4ux30c8}}
+\begin{itemize}
+\item
+  USGS EarthExplorer\\
+  (\url{https://earthexplorer.usgs.gov/})\\
+  アメリカ地質調査所(USGS)が衛星画像データを無償で提供しているサイト　　
+\item
+  EO Browser
+  (\url{https://www.sentinel-hub.com/explore/eobrowser/})\\
+  Sinergiseが衛星データを無償で提供しているサイト。ブラウザ上で、解析や計測を行うことも可能。
+\end{itemize}
 
 \hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5}{%
-\section{衛星データの取得方法}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5}}
+\chapter{衛星データの取得方法}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5}}
 
-\hypertarget{usgs-earthexplorerux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}{%
-\subsection{USGS EarthExplorerをダウンロード、登録/ログインする}\label{usgs-earthexplorerux3092ux30c0ux30a6ux30f3ux30edux30fcux30c9ux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}}
+今回は、USGS EarthExplorerを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法を紹介します。\\
+MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。\\
+Vegetation Index Products: 植物による光の反射の特徴を生かし、植生の状況を把握することを目的とした指標
+
+\hypertarget{usgs-earthexplorerux306bux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}{%
+\section{USGS EarthExplorerに登録/ログインする}\label{usgs-earthexplorerux306bux767bux9332ux30edux30b0ux30a4ux30f3ux3059ux308b}}
+
+ユーザー登録をすることで、衛星画像データのダウンロードが可能になります。
 
 \hypertarget{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux5730ux57dfux3092ux8a2dux5b9aux3059ux308b}{%
-\subsection{データを取得したい地域を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux5730ux57dfux3092ux8a2dux5b9aux3059ux308b}}
+\section{データを取得したい地域を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux5730ux57dfux3092ux8a2dux5b9aux3059ux308b}}
 
 \begin{itemize}
+\tightlist
 \item
-  【Geocoder】のタブで【World Features】を選択する(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)
-\item
-  【Country】から【BANGLADESH】を選択
-\item
-  【Show】を押下
-\item
-  表示された表から、取得したい地域に近い/取得したい地域を選択する
+  特定の地点を含む衛星画像データを取得したい場合
 \end{itemize}
 
-下図のように、右エリアにポイントが表示される
+①【Geocoder】のタブで【World Features】を選択する.\\
+(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)
 
-\hypertarget{ux30c7ux30fcux30bfux53d6ux5f97ux9818ux57dfux3092ux30d0ux30f3ux30b0ux30e9ux30c7ux30b7ux30e5ux5168ux4f53ux306bux62e1ux5f35ux3059ux308b}{%
-\subsection{データ取得領域をバングラデシュ全体に拡張する}\label{ux30c7ux30fcux30bfux53d6ux5f97ux9818ux57dfux3092ux30d0ux30f3ux30b0ux30e9ux30c7ux30b7ux30e5ux5168ux4f53ux306bux62e1ux5f35ux3059ux308b}}
+②【Country】から【BANGLADESH】を選択 .\\
+\includegraphics{images/area1.png}
+③【Show】を押下すると、下図のような表が表示されるので、自分がデータを取得したい地点を選択する.
+\includegraphics{images/table1.png}
 
-【Polygon】\\
-+ データを取得したいエリアをポイントが取り囲むよう、各地点をクリックしていく
-+ 選択したエリアが赤く表示される
+④地点を選択すると、下図のように右地図エリアにもポイントが表れる.
+\includegraphics{images/showarea.png}
 
-【Circle】\\
-+ データを取得したい地域を含むように、右地図上の2点を選択する
-+ 選択した2点で描かれる円の範囲が赤く表示される
+\begin{itemize}
+\tightlist
+\item
+  広範囲の衛星画像データを取得したい場合
+\end{itemize}
+
+\textbf{【Polygon】}　　
+
+①【Polygon】を選択.
+
+②右地図エリアで、データを取得したい地域を囲うように各地点をクリックしていく.\\
+\includegraphics{images/polygon.png}
+
+\textbf{【Circle】}
+
+①【Circle】を選択 .
+
+②右地図エリアから適当に1地点をクリックする.データを取得したい地域に合わせて、もう1地点をクリックする.\\
+\includegraphics{images/circle1.png}
+③【Apply】を押下.
 
 \hypertarget{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}{%
-\subsection{データを取得したい日時を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}}
+\section{データを取得したい日時を設定する}\label{ux30c7ux30fcux30bfux3092ux53d6ux5f97ux3057ux305fux3044ux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}}
 
-\begin{itemize}
-\tightlist
-\item
-  【Date Range】から選択
-  (カレンダーから選択が可能)
-\end{itemize}
+【Date Range】から選択
+(カレンダーから選択が可能)
+\includegraphics{images/date.png}
 
 \hypertarget{ux96f2ux306eux91cfux3092ux8abfux6574ux3059ux308b}{%
-\subsection{雲の量を調整する}\label{ux96f2ux306eux91cfux3092ux8abfux6574ux3059ux308b}}
+\section{雲の量を調整する}\label{ux96f2ux306eux91cfux3092ux8abfux6574ux3059ux308b}}
 
-\begin{itemize}
-\tightlist
-\item
-  【Cloud Cover】でバーを動かすことにより、設定が可能
-  ＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない
-\end{itemize}
+【Cloud Cover】でバーを動かすことにより、設定が可能
+＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない.\\
+\includegraphics{images/cloud.png}
 
 \hypertarget{data-setsux3092ux62bcux4e0b}{%
-\subsection{Data Setsを押下}\label{data-setsux3092ux62bcux4e0b}}
+\section{【Data Sets】を押下}\label{data-setsux3092ux62bcux4e0b}}
 
 \hypertarget{ux5fc5ux8981ux306aux30c7ux30fcux30bfux30bbux30c3ux30c8ux3092ux9078ux629eux3059ux308b}{%
-\subsection{必要なデータセットを選択する}\label{ux5fc5ux8981ux306aux30c7ux30fcux30bfux30bbux30c3ux30c8ux3092ux9078ux629eux3059ux308b}}
+\section{必要なデータセットを選択する}\label{ux5fc5ux8981ux306aux30c7ux30fcux30bfux30bbux30c3ux30c8ux3092ux9078ux629eux3059ux308b}}
+
+データセットの中から必要なデータセットを選択する
+
+今回は、冒頭のとおり、MODIS Vegetation Index Productsを選択します.
+
+＊データセット名の左のインフォメーションマークを押下すると説明が出る
+
+＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される\\
+\includegraphics{images/datasets.png}
+
+\hypertarget{resultsux3092ux62bcux4e0b}{%
+\section{【Results】を押下}\label{resultsux3092ux62bcux4e0b}}
+
+\hypertarget{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}{%
+\section{データのダウンロード}\label{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}}
 
 \begin{itemize}
 \tightlist
 \item
-  データセットの中から必要なデータセットを選択する\\
-  ＊データセット名の左のインフォメーションマークを押下すると説明が出る\\
-  ＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される
+  【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる
+  \includegraphics{images/overray.png}
 \end{itemize}
 
-\hypertarget{resultsux3092ux62bcux4e0bux3059ux308b}{%
-\subsection{Resultsを押下する}\label{resultsux3092ux62bcux4e0bux3059ux308b}}
-
-\hypertarget{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}{%
-\subsection{データのダウンロード}\label{ux30c7ux30fcux30bfux306eux30c0ux30a6ux30f3ux30edux30fcux30c9}}
-
-+【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる\\
 ＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)
-+ 必要なデータセット以外は、【Exclude Scene from Results】を押下
-+ 【Click here to export your results】の【Export data】を押下し、【Export Name】、【Export Format】を設定する\\
-ダウンロード完了
+
+\begin{itemize}
+\item
+  【Click here to export your results】の【Export data】を押下.\\
+  \includegraphics{images/download.png}
+\item
+  【Export name】,【Export file】を設定する.
+\item
+  【Download】を押下.\\
+  \includegraphics{images/last.png}
+\end{itemize}
 
 \hypertarget{ux885bux661fux30c7ux30fcux30bfux3092ux6d3bux7528ux3057ux3088ux3046}{%
 \chapter{衛星データを活用しよう}\label{ux885bux661fux30c7ux30fcux30bfux3092ux6d3bux7528ux3057ux3088ux3046}}

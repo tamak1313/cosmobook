@@ -1,12 +1,13 @@
-# 衛星データについて知ろう
-
-## なぜ今、リモートセンシングが注目を集めているのか
-
-## リモートセンシング活用事例
-
-詳しい活用事例は、[リモートセンシング活用事例集](https://tamak1313.github.io/casestudy/)で紹介しています(日々更新中！)
-ぜひ合わせてご覧ください。
+# 事前準備
 
 ## 衛星データの種類
 
+## 衛星データをダウンロードできるサイト
 
++ USGS EarthExplorer  
+(https://earthexplorer.usgs.gov/)  
+アメリカ地質調査所(USGS)が衛星画像データを無償で提供しているサイト　　
+
++ EO Browser
+(https://www.sentinel-hub.com/explore/eobrowser/)     
+Sinergiseが衛星データを無償で提供しているサイト。ブラウザ上で、解析や計測を行うことも可能。
