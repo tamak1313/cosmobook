@@ -11,3 +11,7 @@
 + EO Browser
 (https://www.sentinel-hub.com/explore/eobrowser/)     
 Sinergiseが衛星データを無償で提供しているサイト。ブラウザ上で、解析や計測を行うことも可能。
+
++ LAADS DAAC
+(https://ladsweb.modaps.eosdis.nasa.gov/) 
+NASAが衛星データを無償提供しているサイト。

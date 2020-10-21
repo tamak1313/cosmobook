@@ -73,7 +73,7 @@
 
 \title{衛星BASIC}
 \author{Tamaki.M}
-\date{2020-10-16}
+\date{2020-10-21}
 
 \begin{document}
 \maketitle
@@ -117,10 +117,14 @@ QGIS 3.14.16
   EO Browser
   (\url{https://www.sentinel-hub.com/explore/eobrowser/})\\
   Sinergiseが衛星データを無償で提供しているサイト。ブラウザ上で、解析や計測を行うことも可能。
+\item
+  LAADS DAAC
+  (\url{https://ladsweb.modaps.eosdis.nasa.gov/})
+  NASAが衛星データを無償提供しているサイト。
 \end{itemize}
 
-\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5}{%
-\chapter{衛星データの取得方法}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5}}
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5usgsux7de8}{%
+\chapter{衛星データの取得方法(USGS編)}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5usgsux7de8}}
 
 今回は、USGS EarthExplorerを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法を紹介します。\\
 MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。\\
@@ -223,12 +227,71 @@ Vegetation Index Products: 植物による光の反射の特徴を生かし、�
 \item
   【Export name】,【Export file】を設定する.
 \item
-  【Download】を押下.\\
+  【Download】を押下. HDFファイルでのダウンロードとなる。
   \includegraphics{images/last.png}
 \end{itemize}
 
-\hypertarget{ux885bux661fux30c7ux30fcux30bfux3092ux6d3bux7528ux3057ux3088ux3046}{%
-\chapter{衛星データを活用しよう}\label{ux885bux661fux30c7ux30fcux30bfux3092ux6d3bux7528ux3057ux3088ux3046}}
+\hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5laads-daacux7de8}{%
+\chapter{衛星データの取得方法(LAADS DAAC編)}\label{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5laads-daacux7de8}}
+
+今回は、LAADS DAACを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法をご紹介します。
+
+MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。\\
+Vegetation Index Products: 植物による光の反射の特徴を生かし、植生の状況を把握することを目的とした指標
+
+\#\#　LAADS DAACに登録/ログインする
+
+\#\#　【Find Data】を押す
+\includegraphics{images/LD-1.png}
+\#\# ①PRODUCTS：必要なデータを選択する
+
+ここではMOD13A1,MYD13A1を選択した。
+\includegraphics{images/LD-2.png}
+
+\hypertarget{timeux53d6ux5f97ux3057ux305fux3044ux30c7ux30fcux30bfux306eux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}{%
+\section{②TIME：取得したいデータの日時を設定する}\label{timeux53d6ux5f97ux3057ux305fux3044ux30c7ux30fcux30bfux306eux65e5ux6642ux3092ux8a2dux5b9aux3059ux308b}}
+
+ここでは2017年3月1日から2017年3月31日を設定。
+
+必ず【Add date】を押す。
+\includegraphics{images/LD-3.png}
+
+\#\#　③LOCATION：取得したいデータの地域を設定する
+
+ここではバングラデシュを選択する。
+
+【Countries】を押すと、国境が表示されるので、データを取得したい国を選択する。
+
+そのほかにも、全世界や自分で地域を設定することも可能。
+\includegraphics{images/LD-4.png}
+
+\hypertarget{filesux8868ux793aux3055ux308cux305fux30d5ux30a1ux30a4ux30ebux304bux3089ux5fc5ux8981ux306aux3082ux306eux3092ux9078ux629eux3059ux308b}{%
+\section{④FILES：表示されたファイルから必要なものを選択する}\label{filesux8868ux793aux3055ux308cux305fux30d5ux30a1ux30a4ux30ebux304bux3089ux5fc5ux8981ux306aux3082ux306eux3092ux9078ux629eux3059ux308b}}
+
+ここでファイルの左にある【Download】を押すとHDFファイルのダウンロードが可能。
+GeoTIFF形式に変更したい場合は、以下の操作を行う。
+
+\begin{figure}
+\centering
+\includegraphics{images/LD-5.png}
+\caption{files}
+\end{figure}
+
+\hypertarget{revieworderux30d5ux30a1ux30a4ux30ebux306eux5f62ux5f0fux306aux3069ux3092ux6307ux5b9aux3057ux30c0ux30a6ux30f3ux30edux30fcux30c9ux3059ux308b}{%
+\section{⑤REVIEW\&ORDER：ファイルの形式などを指定し、ダウンロードする}\label{revieworderux30d5ux30a1ux30a4ux30ebux306eux5f62ux5f0fux306aux3069ux3092ux6307ux5b9aux3057ux30c0ux30a6ux30f3ux30edux30fcux30c9ux3059ux308b}}
+
+【Apply Post－Processing】を押す。
+
+今回はNDVIのデータを取得できれば良いので、【SDs】を押し、【500m 16days NDVI】を選択する。
+\includegraphics{images/LD-6.png}
+
+【Reformat】を押し、【Convert products to geoTIFF format】にチェックを入れる。
+\includegraphics{images/LD-7.png}
+
+\hypertarget{submit-orderux3092ux62bcux3059}{%
+\section{【Submit Order】を押す}\label{submit-orderux3092ux62bcux3059}}
+
+5分程度で登録しているメールアドレスに``LAADS Web Order Notification''というタイトルのメールが届くので、文中のURLからダウンロードを行う。
 
 \hypertarget{applications}{%
 \chapter{Applications}\label{applications}}

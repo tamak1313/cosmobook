@@ -1,4 +1,4 @@
-# 衛星データの取得方法
+# 衛星データの取得方法(USGS編)
 
 今回は、USGS EarthExplorerを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法を紹介します。  
 MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。  
@@ -83,6 +83,6 @@ Vegetation Index Products:  植物による光の反射の特徴を生かし、�
 
 + 【Export name】,【Export file】を設定する.  
 
-+  【Download】を押下.  
++  【Download】を押下. HDFファイルでのダウンロードとなる。 
 ![ダウンロード２](images/last.png)
 
