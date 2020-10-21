@@ -90,10 +90,13 @@
 <li class="chapter" data-level="2.8" data-path="衛星データの取得方法usgs編.html"><a href="衛星データの取得方法usgs編.html#データのダウンロード"><i class="fa fa-check"></i><b>2.8</b> データのダウンロード</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html"><i class="fa fa-check"></i><b>3</b> 衛星データの取得方法(LAADS DAAC編)</a><ul>
-<li class="chapter" data-level="3.1" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#time取得したいデータの日時を設定する"><i class="fa fa-check"></i><b>3.1</b> ②TIME：取得したいデータの日時を設定する</a></li>
-<li class="chapter" data-level="3.2" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#files表示されたファイルから必要なものを選択する"><i class="fa fa-check"></i><b>3.2</b> ④FILES：表示されたファイルから必要なものを選択する</a></li>
-<li class="chapter" data-level="3.3" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#revieworderファイルの形式などを指定しダウンロードする"><i class="fa fa-check"></i><b>3.3</b> ⑤REVIEW&amp;ORDER：ファイルの形式などを指定し、ダウンロードする</a></li>
-<li class="chapter" data-level="3.4" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#submit-orderを押す"><i class="fa fa-check"></i><b>3.4</b> 【Submit Order】を押す</a></li>
+<li class="chapter" data-level="3.1" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#laads-daacに登録ログインする"><i class="fa fa-check"></i><b>3.1</b> LAADS DAACに登録/ログインする</a></li>
+<li class="chapter" data-level="3.2" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#find-dataを押す"><i class="fa fa-check"></i><b>3.2</b> 【Find Data】を押す</a></li>
+<li class="chapter" data-level="3.3" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#time取得したいデータの日時を設定する"><i class="fa fa-check"></i><b>3.3</b> ②TIME：取得したいデータの日時を設定する</a></li>
+<li class="chapter" data-level="3.4" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#location取得したいデータの地域を設定する"><i class="fa fa-check"></i><b>3.4</b> ③LOCATION：取得したいデータの地域を設定する</a></li>
+<li class="chapter" data-level="3.5" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#files表示されたファイルから必要なものを選択する"><i class="fa fa-check"></i><b>3.5</b> ④FILES：表示されたファイルから必要なものを選択する</a></li>
+<li class="chapter" data-level="3.6" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#revieworderファイルの形式などを指定しダウンロードする"><i class="fa fa-check"></i><b>3.6</b> ⑤REVIEW&amp;ORDER：ファイルの形式などを指定し、ダウンロードする</a></li>
+<li class="chapter" data-level="3.7" data-path="衛星データの取得方法laads-daac編.html"><a href="衛星データの取得方法laads-daac編.html#submit-orderを押す"><i class="fa fa-check"></i><b>3.7</b> 【Submit Order】を押す</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
 <li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
@@ -126,25 +129,31 @@
 <p>今回は、LAADS DAACを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法をご紹介します。</p>
 <p>MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。<br />
 Vegetation Index Products: 植物による光の反射の特徴を生かし、植生の状況を把握することを目的とした指標</p>
-<p>##　LAADS DAACに登録/ログインする</p>
-<p>##　【Find Data】を押す
-<img src="images/LD-1.png" alt="find data" />
+<div id="laads-daacに登録ログインする" class="section level2">
+<h2><span class="header-section-number">3.1</span> LAADS DAACに登録/ログインする</h2>
+</div>
+<div id="find-dataを押す" class="section level2">
+<h2><span class="header-section-number">3.2</span> 【Find Data】を押す</h2>
+<p><img src="images/LD-1.png" alt="find data" />
 ## ①PRODUCTS：必要なデータを選択する</p>
 <p>ここではMOD13A1,MYD13A1を選択した。
 <img src="images/LD-2.png" alt="data" /></p>
+</div>
 <div id="time取得したいデータの日時を設定する" class="section level2">
-<h2><span class="header-section-number">3.1</span> ②TIME：取得したいデータの日時を設定する</h2>
+<h2><span class="header-section-number">3.3</span> ②TIME：取得したいデータの日時を設定する</h2>
 <p>ここでは2017年3月1日から2017年3月31日を設定。</p>
 <p>必ず【Add date】を押す。
 <img src="images/LD-3.png" alt="date" /></p>
-<p>##　③LOCATION：取得したいデータの地域を設定する</p>
+</div>
+<div id="location取得したいデータの地域を設定する" class="section level2">
+<h2><span class="header-section-number">3.4</span> ③LOCATION：取得したいデータの地域を設定する</h2>
 <p>ここではバングラデシュを選択する。</p>
 <p>【Countries】を押すと、国境が表示されるので、データを取得したい国を選択する。</p>
 <p>そのほかにも、全世界や自分で地域を設定することも可能。
 <img src="images/LD-4.png" alt="countries" /></p>
 </div>
 <div id="files表示されたファイルから必要なものを選択する" class="section level2">
-<h2><span class="header-section-number">3.2</span> ④FILES：表示されたファイルから必要なものを選択する</h2>
+<h2><span class="header-section-number">3.5</span> ④FILES：表示されたファイルから必要なものを選択する</h2>
 <p>ここでファイルの左にある【Download】を押すとHDFファイルのダウンロードが可能。
 GeoTIFF形式に変更したい場合は、以下の操作を行う。</p>
 <div class="figure">
@@ -153,7 +162,7 @@ GeoTIFF形式に変更したい場合は、以下の操作を行う。</p>
 </div>
 </div>
 <div id="revieworderファイルの形式などを指定しダウンロードする" class="section level2">
-<h2><span class="header-section-number">3.3</span> ⑤REVIEW&amp;ORDER：ファイルの形式などを指定し、ダウンロードする</h2>
+<h2><span class="header-section-number">3.6</span> ⑤REVIEW&amp;ORDER：ファイルの形式などを指定し、ダウンロードする</h2>
 <p>【Apply Post－Processing】を押す。</p>
 <p>今回はNDVIのデータを取得できれば良いので、【SDs】を押し、【500m 16days NDVI】を選択する。
 <img src="images/LD-6.png" alt="NDVI" /></p>
@@ -161,7 +170,7 @@ GeoTIFF形式に変更したい場合は、以下の操作を行う。</p>
 <img src="images/LD-7.png" alt="tif" /></p>
 </div>
 <div id="submit-orderを押す" class="section level2">
-<h2><span class="header-section-number">3.4</span> 【Submit Order】を押す</h2>
+<h2><span class="header-section-number">3.7</span> 【Submit Order】を押す</h2>
 <p>5分程度で登録しているメールアドレスに“LAADS Web Order Notification”というタイトルのメールが届くので、文中のURLからダウンロードを行う。</p>
 
 </div>

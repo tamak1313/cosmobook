@@ -5,11 +5,11 @@
 MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。  
 Vegetation Index Products:  植物による光の反射の特徴を生かし、植生の状況を把握することを目的とした指標 
 
-##　LAADS DAACに登録/ログインする
+## LAADS DAACに登録/ログインする
 
-##　【Find Data】を押す
+## 【Find Data】を押す
 ![find data](images/LD-1.png)
-## ①PRODUCTS：必要なデータを選択する
+## ①PRODUCTS：必要なデータを選択する  
 
 ここではMOD13A1,MYD13A1を選択した。
 ![data](images/LD-2.png)
@@ -21,7 +21,8 @@ Vegetation Index Products:  植物による光の反射の特徴を生かし、�
 必ず【Add date】を押す。
 ![date](images/LD-3.png)
 
-##　③LOCATION：取得したいデータの地域を設定する
+## ③LOCATION：取得したいデータの地域を設定する
+
 
 ここではバングラデシュを選択する。
 
