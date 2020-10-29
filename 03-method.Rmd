@@ -7,8 +7,22 @@ Vegetation Index Products:  植物による光の反射の特徴を生かし、�
 
 ## LAADS DAACに登録/ログインする
 
+LAADS DAACから取得できるデータ　　
+
++ MODIS(最新データ日時：2020年9月29日) 　
+
++ AVHRR  
+
++ ESA copernics-sentinel-3 
+
++ MERIS  
+
++ VIIRS  
+
+
 ## 【Find Data】を押す
 ![find data](images/LD-1.png)
+
 ## ①PRODUCTS：必要なデータを選択する  
 
 ここではMOD13A1,MYD13A1を選択した。
