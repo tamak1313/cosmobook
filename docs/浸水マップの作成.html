@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 衛星データの取得方法(USGS編) | 衛星BASIC</title>
+  <title>Chapter 4 浸水マップの作成 | 衛星BASIC</title>
   <meta name="description" content="衛星データ初心者の方向けに、衛星データのいろはをお伝えします！" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 衛星データの取得方法(USGS編) | 衛星BASIC" />
+  <meta property="og:title" content="Chapter 4 浸水マップの作成 | 衛星BASIC" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 衛星データの取得方法(USGS編) | 衛星BASIC" />
+  <meta name="twitter:title" content="Chapter 4 浸水マップの作成 | 衛星BASIC" />
   
   <meta name="twitter:description" content="衛星データ初心者の方向けに、衛星データのいろはをお伝えします！" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="事前準備.html"/>
-<link rel="next" href="衛星データの取得方法laads-daac編.html"/>
+<link rel="prev" href="衛星データの取得方法laads-daac編.html"/>
+<link rel="next" href="final-words.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -130,86 +130,43 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="衛星データの取得方法usgs編" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> 衛星データの取得方法(USGS編)</h1>
-<p>今回は、USGS EarthExplorerを利用して、BangladeshのMODIS Vegetation Index Productsをダウンロードする方法を紹介します。<br />
-MODIS: NASAによって開発された可視・赤外域の放射計で、地球観測衛星のTerra、Aquaに搭載されている。<br />
-Vegetation Index Products: 植物による光の反射の特徴を生かし、植生の状況を把握することを目的とした指標</p>
-<div id="usgs-earthexplorerに登録ログインする" class="section level2">
-<h2><span class="header-section-number">2.1</span> USGS EarthExplorerに登録/ログインする</h2>
-<p>ユーザー登録をすることで、衛星画像データのダウンロードが可能になります。</p>
-<p>取得できるデータ</p>
+<div id="浸水マップの作成" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> 浸水マップの作成</h1>
+<p>洪水時の浸水状況を把握するためのマップを、Google earth engineを使って作成してみましょう。　　</p>
+<div id="google-earth-engineについて" class="section level2">
+<h2><span class="header-section-number">4.1</span> Google earth engineについて</h2>
+<p>Google earth engineとは、衛星画像をGoogleクラウド上で解析・利用できるサービス。　　
+＊研究・教育・非営利目的ならば無料で利用可能。　　</p>
+<p>Google earth engineは、以下の点で画期的と言われています。　　</p>
 <ul>
-<li>MODIS(最新データ日時：2020年9月29日)</li>
+<li><p>前処理済みデータ(ARD)を入手できる　　</p></li>
+<li><p>容量の大きなデータをダウンロードすることなく、解析することが可能　　</p></li>
 </ul>
+<p>それでは早速、Google earth engineに登録してみましょう。　　</p>
+<p>(Googleアカウントを所持していない場合)Googleアカウントを登録する　　</p>
+<p>Google earth engineの【Sign up】タブからログイン　</p>
 </div>
-<div id="データを取得したい地域を設定する" class="section level2">
-<h2><span class="header-section-number">2.2</span> データを取得したい地域を設定する</h2>
-<ul>
-<li>特定の地点を含む衛星画像データを取得したい場合</li>
-</ul>
-<p>①【Geocoder】のタブで【World Features】を選択する.<br />
-(米国内のデータを取得したい場合は、【US Features(デフォルト)】に設定)</p>
-<p>②【Country】から【BANGLADESH】を選択 .<br />
-<img src="images/area1.png" alt="地域の設定" />
-③【Show】を押下すると、下図のような表が表示されるので、自分がデータを取得したい地点を選択する.
-<img src="images/table1.png" alt="地域の選択" /></p>
-<p>④地点を選択すると、下図のように右地図エリアにもポイントが表れる.
-<img src="images/showarea.png" alt="地点の表示" /></p>
-<ul>
-<li>広範囲の衛星画像データを取得したい場合</li>
-</ul>
-<p><strong>【Polygon】</strong>　　</p>
-<p>①【Polygon】を選択.</p>
-<p>②右地図エリアで、データを取得したい地域を囲うように各地点をクリックしていく.<br />
-<img src="images/polygon.png" alt="地点の選択、ポリゴンの表示" /></p>
-<p><strong>【Circle】</strong></p>
-<p>①【Circle】を選択 .</p>
-<p>②右地図エリアから適当に1地点をクリックする.データを取得したい地域に合わせて、もう1地点をクリックする.<br />
-<img src="images/circle1.png" alt="地点の選択、円の表示" />
-③【Apply】を押下.</p>
+<div id="gee-code-editorの使用" class="section level2">
+<h2><span class="header-section-number">4.2</span> GEE CODE EDITORの使用　　</h2>
+<p><img src="images/GEE.png" alt="code editor" />
+①コードの入力画面　　</p>
+<p>②　　</p>
+<p>③　地図や結果の表示画面　　</p>
 </div>
-<div id="データを取得したい日時を設定する" class="section level2">
-<h2><span class="header-section-number">2.3</span> データを取得したい日時を設定する</h2>
-<p>【Date Range】から選択
-(カレンダーから選択が可能)
-<img src="images/date.png" alt="日時の選択" /></p>
+<div id="gee-code-editorで浸水マップを作成する" class="section level2">
+<h2><span class="header-section-number">4.3</span> GEE code editorで浸水マップを作成する　　</h2>
+<p>参考：UN Spider(<a href="https://un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping/step-by-step" class="uri">https://un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping/step-by-step</a>)</p>
+<p>今回の浸水マップ作成に当たっては、以下のコードを使用しました。基本的なコードは以下のURLのものと同じなので、今回は研究内容によって変更する項目について説明します。</p>
+<div id="対象エリアの設定" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> 対象エリアの設定</h3>
 </div>
-<div id="雲の量を調整する" class="section level2">
-<h2><span class="header-section-number">2.4</span> 雲の量を調整する</h2>
-<p>【Cloud Cover】でバーを動かすことにより、設定が可能
-＊ただし衛星データによっては雲量調整を行っていないものがあり、その場合は適用されない.<br />
-<img src="images/cloud.png" alt="雲量設定" /></p>
+<div id="対象日時の設定" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> 対象日時の設定　　</h3>
 </div>
-<div id="data-setsを押下" class="section level2">
-<h2><span class="header-section-number">2.5</span> 【Data Sets】を押下</h2>
-</div>
-<div id="必要なデータセットを選択する" class="section level2">
-<h2><span class="header-section-number">2.6</span> 必要なデータセットを選択する</h2>
-<p>データセットの中から必要なデータセットを選択する</p>
-<p>今回は、冒頭のとおり、MODIS Vegetation Index Productsを選択します.</p>
-<p>＊データセット名の左のインフォメーションマークを押下すると説明が出る</p>
-<p>＊データセット名の左の地図マークを押下すると、そのデータのカバー範囲が右地図上に表示される<br />
-<img src="images/datasets.png" alt="データの選択" /></p>
-</div>
-<div id="resultsを押下" class="section level2">
-<h2><span class="header-section-number">2.7</span> 【Results】を押下</h2>
-</div>
-<div id="データのダウンロード" class="section level2">
-<h2><span class="header-section-number">2.8</span> データのダウンロード</h2>
-<ul>
-<li>【Show Brouwse Overlay】を押下すると、各データを右地図上に表示することができる
-<img src="images/overray.png" alt="データの領域の確認" /></li>
-</ul>
-<p>＊複数のデータにわたる場合には、Acquisition Dateを確認する(データの詳細は【Show Mwtadata and Browse】から確認可能)</p>
-<ul>
-<li><p>【Click here to export your results】の【Export data】を押下.<br />
-<img src="images/download.png" alt="ダウンロード１" /></p></li>
-<li><p>【Export name】,【Export file】を設定する.</p></li>
-<li><p>【Download】を押下. HDFファイルでのダウンロードとなる。
-<img src="images/last.png" alt="ダウンロード２" /></p></li>
-</ul>
+<div id="各種設定" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> 各種設定</h3>
 
+</div>
 </div>
 </div>
             </section>
@@ -217,8 +174,8 @@ Vegetation Index Products: 植物による光の反射の特徴を生かし、�
           </div>
         </div>
       </div>
-<a href="事前準備.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="衛星データの取得方法laads-daac編.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="衛星データの取得方法laads-daac編.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -73,7 +73,7 @@
 
 \title{衛星BASIC}
 \author{Tamaki.M}
-\date{2020-10-29}
+\date{2020-11-05}
 
 \begin{document}
 \maketitle
@@ -121,6 +121,9 @@ QGIS 3.14.16
   LAADS DAAC
   (\url{https://ladsweb.modaps.eosdis.nasa.gov/})
   NASAが衛星データを無償提供しているサイト。
+\item
+  Google earth engine
+  (\url{https://earthengine.google.com/})
 \end{itemize}
 
 \hypertarget{ux885bux661fux30c7ux30fcux30bfux306eux53d6ux5f97ux65b9ux6cd5usgsux7de8}{%
@@ -326,16 +329,57 @@ GeoTIFF形式に変更したい場合は、以下の操作を行う。
 
 5分程度で登録しているメールアドレスに``LAADS Web Order Notification''というタイトルのメールが届くので、文中のURLからダウンロードを行う。
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\hypertarget{ux6d78ux6c34ux30deux30c3ux30d7ux306eux4f5cux6210}{%
+\chapter{浸水マップの作成}\label{ux6d78ux6c34ux30deux30c3ux30d7ux306eux4f5cux6210}}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+洪水時の浸水状況を把握するためのマップを、Google earth engineを使って作成してみましょう。　　
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\hypertarget{google-earth-engineux306bux3064ux3044ux3066}{%
+\section{Google earth engineについて}\label{google-earth-engineux306bux3064ux3044ux3066}}
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+Google earth engineとは、衛星画像をGoogleクラウド上で解析・利用できるサービス。　　
+＊研究・教育・非営利目的ならば無料で利用可能。　　
+
+Google earth engineは、以下の点で画期的と言われています。　　
+
+\begin{itemize}
+\item
+  前処理済みデータ(ARD)を入手できる　　
+\item
+  容量の大きなデータをダウンロードすることなく、解析することが可能　　
+\end{itemize}
+
+それでは早速、Google earth engineに登録してみましょう。　　
+
+(Googleアカウントを所持していない場合)Googleアカウントを登録する　　
+
+Google earth engineの【Sign up】タブからログイン　
+
+\hypertarget{gee-code-editorux306eux4f7fux7528}{%
+\section{GEE CODE EDITORの使用　　}\label{gee-code-editorux306eux4f7fux7528}}
+
+\includegraphics{images/GEE.png}
+①コードの入力画面　　
+
+②　　
+
+③　地図や結果の表示画面　　
+
+\hypertarget{gee-code-editorux3067ux6d78ux6c34ux30deux30c3ux30d7ux3092ux4f5cux6210ux3059ux308b}{%
+\section{GEE code editorで浸水マップを作成する　　}\label{gee-code-editorux3067ux6d78ux6c34ux30deux30c3ux30d7ux3092ux4f5cux6210ux3059ux308b}}
+
+参考：UN Spider(\url{https://un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping/step-by-step})
+
+今回の浸水マップ作成に当たっては、以下のコードを使用しました。基本的なコードは以下のURLのものと同じなので、今回は研究内容によって変更する項目について説明します。
+
+\hypertarget{ux5bfeux8c61ux30a8ux30eaux30a2ux306eux8a2dux5b9a}{%
+\subsection{対象エリアの設定}\label{ux5bfeux8c61ux30a8ux30eaux30a2ux306eux8a2dux5b9a}}
+
+\hypertarget{ux5bfeux8c61ux65e5ux6642ux306eux8a2dux5b9a}{%
+\subsection{対象日時の設定　　}\label{ux5bfeux8c61ux65e5ux6642ux306eux8a2dux5b9a}}
+
+\hypertarget{ux5404ux7a2eux8a2dux5b9a}{%
+\subsection{各種設定}\label{ux5404ux7a2eux8a2dux5b9a}}
 
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}

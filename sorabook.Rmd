@@ -46,6 +46,9 @@ Sinergiseが衛星データを無償で提供しているサイト。ブラウ�
 (https://ladsweb.modaps.eosdis.nasa.gov/) 
 NASAが衛星データを無償提供しているサイト。
 
++ Google earth engine
+(https://earthengine.google.com/)
+
 <!--chapter:end:01-intro.Rmd-->
 
 # 衛星データの取得方法(USGS編)
@@ -214,13 +217,50 @@ GeoTIFF形式に変更したい場合は、以下の操作を行う。
 
 <!--chapter:end:03-method.Rmd-->
 
-# Applications
+#  浸水マップの作成
 
-Some _significant_ applications are demonstrated in this chapter.
+洪水時の浸水状況を把握するためのマップを、Google earth engineを使って作成してみましょう。　　
 
-## Example one
+## Google earth engineについて
 
-## Example two
+Google earth engineとは、衛星画像をGoogleクラウド上で解析・利用できるサービス。　　
+＊研究・教育・非営利目的ならば無料で利用可能。　　
+
+Google earth engineは、以下の点で画期的と言われています。　　
+
++ 前処理済みデータ(ARD)を入手できる　　
+
++ 容量の大きなデータをダウンロードすることなく、解析することが可能　　
+
+それでは早速、Google earth engineに登録してみましょう。　　
+
+(Googleアカウントを所持していない場合)Googleアカウントを登録する　　
+
+Google earth engineの【Sign up】タブからログイン　
+
+
+## GEE CODE EDITORの使用　　
+
+![code editor](images/GEE.png)
+①コードの入力画面　　
+
+②　　
+
+③　地図や結果の表示画面　　
+
+## GEE code editorで浸水マップを作成する　　
+
+参考：UN Spider(https://un-spider.org/advisory-support/recommended-practices/recommended-practice-google-earth-engine-flood-mapping/step-by-step)  
+
+今回の浸水マップ作成に当たっては、以下のコードを使用しました。基本的なコードは以下のURLのものと同じなので、今回は研究内容によって変更する項目について説明します。
+
+### 対象エリアの設定
+
+### 対象日時の設定　　
+
+### 各種設定
+
+
 
 <!--chapter:end:04-application.Rmd-->
 
